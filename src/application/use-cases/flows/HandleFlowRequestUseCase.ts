@@ -149,7 +149,7 @@ export class HandleFlowRequestUseCase {
       }
 
       // 5. Process action
-      const response = this.flowEngine.processAction(
+      const response = await this.flowEngine.processAction(
         decrypted.action,
         flow,
         session,
